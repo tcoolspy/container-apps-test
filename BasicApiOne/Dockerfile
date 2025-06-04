@@ -13,7 +13,7 @@ RUN mkdir basic-api-one
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Development
 #WORKDIR /src
-WORKDIR .
+# WORKDIR .
 # COPY ["BasicApiOne/BasicApiOne.csproj", "BasicApiOne/"]
 # COPY BasicApiOne.csproj basic-api-one
 COPY . .
