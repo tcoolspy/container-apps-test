@@ -1,12 +1,4 @@
-﻿#FROM registry.redhat.io/ubi8/ubi-minimal:8.9 AS certificate
-#
-#RUN microdnf -y install curl
-#RUN microdnf -y install openssl
-#
-#RUN curl -o ./BXS-ROOTBancorpSouth\ Root\ Certificate\ Authority.crt http://certs.bank.ad.bxs.com/pki/BXS-ROOTBancorpSouth%20Root%20Certificate%20Authority.crt
-#RUN openssl x509 -inform DER -in BXS-ROOTBancorpSouth\ Root\ Certificate\ Authority.crt -outform PEM -out /tmp/BancorpSouthCertificate.crt
-
-FROM registry.redhat.io/rhel8/dotnet-80:8.0 AS build-env
+﻿FROM registry.redhat.io/rhel8/dotnet-80:8.0 AS build-env
 
 USER 0
 WORKDIR /src
@@ -27,12 +19,10 @@ RUN dotnet restore "./basic-api-one/BasicApiOne.csproj"
 #COPY BasicApiOne ./basic-api-one
 COPY . .
 
-#ENV DOTNET_TEST_PROJECTS=accounts-orchestrator-tests
-
 # Remove source files after assemble, not needed to run
 ENV DOTNET_RM_SRC=true
 
-ENV DOTNET_STARTUP_PROJECT=basic-api-one/BasicApiOne.csproj
+ENV DOTNET_STARTUP_PROJECT=BasicApiOne/BasicApiOne.csproj
 
 RUN /usr/libexec/s2i/assemble
 
