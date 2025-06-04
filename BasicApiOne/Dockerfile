@@ -20,8 +20,8 @@ COPY . .
 #RUN dotnet restore ./BasicApiOne/BasicApiOne.csproj
 RUN dotnet restore "./BasicApiOne.csproj"
 COPY . .
-WORKDIR "/src/basic-api-one"
-RUN dotnet build "BasicApiOne.csproj" -c $BUILD_CONFIGURATION -o /app/build
+# WORKDIR "/src/basic-api-one"
+RUN dotnet build "./BasicApiOne.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 # This stage is used to publish the service project to be copied to the final stage
 FROM build AS publish
