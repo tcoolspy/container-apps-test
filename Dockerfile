@@ -21,7 +21,7 @@ COPY ./nuget.config ./
 ENV DOTNET_RESTORE_CONFIGFILE=./nuget.config
 
 ENV DOTNET_NUGET_SIGNATURE_VERIFICATION=false
-
+WORKDIR /src
 RUN dotnet restore
 
 COPY BasicApiOne ./basic-api-one
