@@ -14,7 +14,8 @@ ARG BUILD_CONFIGURATION=Development
 # WORKDIR /src
 # COPY ["BasicApiOne/BasicApiOne.csproj", "BasicApiOne/"]
 COPY BasicApiOne.csproj BasicApiOne
-RUN dotnet restore "./BasicApiOne/BasicApiOne.csproj"
+# RUN dotnet restore "./BasicApiOne/BasicApiOne.csproj"
+RUN dotnet restore "./BasicApiOne.csproj"
 COPY . .
 WORKDIR "/src/BasicApiOne"
 RUN dotnet build "./BasicApiOne.csproj" -c $BUILD_CONFIGURATION -o /app/build
