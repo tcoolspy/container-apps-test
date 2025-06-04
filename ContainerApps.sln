@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35931.197 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicApiOne", "BasicApiOne\BasicApiOne.csproj", "{99346C0B-8461-4ADB-B008-CA014DA06505}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{99346C0B-8461-4ADB-B008-CA014DA06505}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99346C0B-8461-4ADB-B008-CA014DA06505}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99346C0B-8461-4ADB-B008-CA014DA06505}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99346C0B-8461-4ADB-B008-CA014DA06505}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {54846208-DA19-42E0-A6A6-CF0087878071}
+	EndGlobalSection
+EndGlobal

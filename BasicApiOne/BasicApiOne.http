@@ -1,0 +1,6 @@
+@BasicApiOne_HostAddress = http://localhost:5189
+
+GET {{BasicApiOne_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
