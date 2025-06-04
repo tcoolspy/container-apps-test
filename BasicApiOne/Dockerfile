@@ -12,7 +12,7 @@ RUN mkdir basic-api-one
 # This stage is used to build the service project
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Development
-WORKDIR ./
+WORKDIR /srcs
 # COPY ["BasicApiOne/BasicApiOne.csproj", "BasicApiOne/"]
 COPY BasicApiOne.csproj basic-api-one
 #RUN dotnet restore ./BasicApiOne/BasicApiOne.csproj
