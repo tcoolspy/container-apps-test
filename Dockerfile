@@ -9,7 +9,7 @@
 FROM registry.redhat.io/rhel8/dotnet-80:8.0 AS build-env
 
 USER 0
-
+WORKDIR /src
 RUN mkdir basic-api-one
 
 # copy all neccessary files
@@ -21,10 +21,11 @@ COPY ./nuget.config ./
 ENV DOTNET_RESTORE_CONFIGFILE=./nuget.config
 
 ENV DOTNET_NUGET_SIGNATURE_VERIFICATION=false
-WORKDIR /src
-RUN dotnet restore
 
-COPY BasicApiOne ./basic-api-one
+RUN dotnet restore "./basic-api-one/BasicApiOne.csproj"
+
+#COPY BasicApiOne ./basic-api-one
+COPY . .
 
 #ENV DOTNET_TEST_PROJECTS=accounts-orchestrator-tests
 
